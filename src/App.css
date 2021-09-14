@@ -9,6 +9,8 @@
   --primary-red: #ff1616;
   --primary-hover-red: #f33501;
   --primary-dark: rgb(52, 58, 64);
+  --primary-nav-dark: rgba(255, 255, 255, 0);
+  --primary-black: #000000;
 }
 
 body {
@@ -38,7 +40,7 @@ nav ul li {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
   color: var(--primary-white) !important;
-  border-top: 0.1875rem solid var(--primary-dark);
+  border-top: 0.1875rem solid var(--primary-nav-dark);
 }
 
 .navbar-brand {
@@ -47,7 +49,7 @@ nav ul li {
   height: 6rem !important;
 }
 
-@media(max-width: 768px ) {
+@media (max-width: 768px) {
   .navbar-brand {
     width: 7rem;
   }
@@ -102,7 +104,7 @@ nav ul li {
   color: var(--primary-white);
 }
 
-@media(max-width: 768px ) {
+@media (max-width: 768px) {
   .main-info h1 {
     font-size: 1.7rem !important;
   }
@@ -126,7 +128,7 @@ nav ul li {
   text-decoration: none;
   background-color: var(--primary-hover-red);
   color: var(--primary-white);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /*---------- PARTICLES JS -----------*/
@@ -137,7 +139,7 @@ nav ul li {
   z-index: 1;
 }
 
-@media(max-width: 768px ) {
+@media (max-width: 768px) {
   .particles-canvas {
     display: none;
   }
@@ -162,7 +164,7 @@ nav ul li {
   text-transform: uppercase;
 }
 
-@media(max-width: 468px ) {
+@media (max-width: 468px) {
   .profile-img {
     width: 10rem;
   }
@@ -204,12 +206,12 @@ nav ul li {
   padding: 0.625rem;
   margin-bottom: 1.875rem;
   background: var(--primary-white);
+  transition: 0.3s ease-in-out;
 }
 
 .services .box:hover {
   background: var(--primary-hover-red);
-  border-bottom: 0.3125rem solid var(--primary-dark);
-
+  border-bottom: 0.3125rem solid var(--primary-green);
 }
 
 .services .box:hover .icon {
@@ -218,6 +220,10 @@ nav ul li {
 
 .services .box:hover .circle {
   background: var(--primary-white);
+}
+
+.services .box:hover h3 {
+  color: var(--primary-white);
 }
 
 .services .box:hover p {
@@ -291,8 +297,8 @@ nav ul li {
   font-weight: 900;
 }
 
-/*--------------- MEDIA ------------------*/ 
-@media(max-width: 768px) {
+/*--------------- MEDIA ------------------*/
+@media (max-width: 768px) {
   .experience .container {
     padding-left: 0;
   }
@@ -308,5 +314,98 @@ nav ul li {
     float: none;
     direction: ltr;
     width: 100%;
+  }
+}
+
+/*********************** PORTFOLIO *****************************************/
+.portfolio-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-wrapper h1 {
+  color: var(--primary-dark);
+}
+
+.portfolio-image {
+  width: 15rem;
+  border: 0.0625rem solid var(--primary-green);
+  padding: 0.5rem 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/*--------------- OVERFLOW BOX ------------------*/
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 15rem;
+  height: 11.5rem;
+  top: 0;
+  border: 0.0625rem solid var(--primary-red);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -8rem;
+  margin-top: 5rem;
+  color: var(--primary-red);
+  font-size: 1.5rem;
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/*--------------- POPUPBOX  ------------------*/
+.portfolio-image-popupbox {
+  width: 45rem;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-green);
+}
+
+.hyper-link:hover {
+  color: var(--primary-red);
+}
+
+/*--------------- MEDIA  ------------------*/
+@media(max-width: 768px) {
+  .portfolio-image-popupbox {
+    width: 100%;
+  }
+}
+
+@media(max-height: 500px) {
+  .popupbox-wrapper {
+    height: 100%;
+  }
+  .portfolio-image-popupbox {
+    width: 55%;
+  }
+}
+
+@media(max-height: 280px) {
+  .popupbox-wrapper {
+    height: 90%;
+  }
+  .portfolio-image-popupbox {
+    width: 30%;
   }
 }
