@@ -14,14 +14,13 @@ const About = () => {
           <h1 className="about-heading">about me</h1>
           <p>
             I'm a guitar player, songwriter, touring musician, record collector,
-            and DJ, with a deep interest in all things Mid-Century. I'm
-            currently in the process of getting my Italian passport with the
-            goal of living between the Pacific Northwest and somewhere in the EU
-            (most likely Italy), or perhaps the UK. My primary goal for learning
-            web development is to assist fellow artists, musicians, venues, and
-            record labels in fulfilling IT-related requirements necessary to
-            succeed in today's market, as well as having the ability to generate
-            revenue independently from anywhere in the world.
+            and DJ, with a deep interest in all things Mid-Century. I'm a dual US/Italian citizen;
+            my goal is to live between the Pacific Northwest and Italy.
+            My primary goal for learning web development is to assist
+            fellow artists, musicians, venues, record labels, and small businesses in fulfilling
+            IT-related requirements necessary to succeed in today's market, as
+            well as having the ability to generate revenue independently from
+            anywhere in the world.
           </p>
         </div>
       </div>
